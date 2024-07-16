@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import homepage, product_detail, user_cabinet
+from core.views import homepage, product_detail, user_cabinet, users_list
 from costumerapp.views import costumer_view
 from news.views import news_list, new_detail
 
@@ -29,4 +29,5 @@ urlpatterns = [
     path('news/', news_list, name='news-list'),
     # /new-detail/8/
     path('new-detail/<int:id>/', new_detail, name='new-detail'),
+    path('users/', users_list),
 ]
